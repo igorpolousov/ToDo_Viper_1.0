@@ -18,9 +18,21 @@ class TodosProvider: ObservableObject {
     
     // Create new todo with default todo, notes, data values
     func createTodo() {
-        var newTodo = Todo(id: 10, todo: "Add new todo name",completed: false, userId: 1034)
+        var newTodo = Todo(id: idForNewTodo(), todo: "Add new todo name",completed: false, userId: 1034)
         newTodo.notes = "Add some notes"
         todos.insert(newTodo, at: 0)
+    }
+    
+    // Find id for new todo
+    private func idForNewTodo() -> Int {
+        guard !todos.isEmpty else { return 1 }
+        var id = 0
+        for todo in todos {
+            if todo.id > id {
+                id = todo.id + 1
+            }
+        }
+        return id
     }
     
 }

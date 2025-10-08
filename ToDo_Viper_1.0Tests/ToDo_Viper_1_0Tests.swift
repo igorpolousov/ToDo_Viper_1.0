@@ -44,6 +44,16 @@ final class ToDo_Viper_1_0Tests: XCTestCase {
  
     }
     
+    // Testing TodosProvider func idForNewTodo
+    func testingTodosProviderCreatesIdForNewTodo() throws {
+        let provider = TodosProvider()
+        provider.createTodo()
+        provider.createTodo()
+        
+        XCTAssertEqual(provider.todos[0].id, 2)
+    }
+    
+    
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
