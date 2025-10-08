@@ -44,3 +44,9 @@ extension Todo: Decodable {
                 
     }
 }
+
+extension Todo: Equatable {
+    static func == (lhs: Todo, rhs: Todo) -> Bool {
+        lhs.id == rhs.id
+    }
+}
