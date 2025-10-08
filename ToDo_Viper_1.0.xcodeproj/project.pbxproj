@@ -25,6 +25,7 @@
 		C2CBDA1B2E96825D00C4097B /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA1A2E96825D00C4097B /* Todos.swift */; };
 		C2CBDA1D2E96827000C4097B /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA1C2E96827000C4097B /* Todo.swift */; };
 		C2CBDA1F2E96853100C4097B /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA1E2E96853100C4097B /* ErrorHandler.swift */; };
+		C2CBDA212E9686E200C4097B /* Todo+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA202E9686C900C4097B /* Todo+Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		C2CBDA1A2E96825D00C4097B /* Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
 		C2CBDA1C2E96827000C4097B /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		C2CBDA1E2E96853100C4097B /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		C2CBDA202E9686C900C4097B /* Todo+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+Preview.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 		C2CBDA072E967D8600C4097B /* PreviewContent */ = {
 			isa = PBXGroup;
 			children = (
+				C2CBDA202E9686C900C4097B /* Todo+Preview.swift */,
 			);
 			path = PreviewContent;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				C2CBDA172E96807100C4097B /* TodoDetailRouter.swift in Sources */,
 				C2CBDA112E96801A00C4097B /* TodoDetailInteractor.swift in Sources */,
 				C2CBD9F82E967B6800C4097B /* ToDo_Viper_1_0App.swift in Sources */,
+				C2CBDA212E9686E200C4097B /* Todo+Preview.swift in Sources */,
 				C2CBDA1D2E96827000C4097B /* Todo.swift in Sources */,
 				C2CBDA1B2E96825D00C4097B /* Todos.swift in Sources */,
 			);
