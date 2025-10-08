@@ -26,6 +26,7 @@
 		C2CBDA1D2E96827000C4097B /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA1C2E96827000C4097B /* Todo.swift */; };
 		C2CBDA1F2E96853100C4097B /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA1E2E96853100C4097B /* ErrorHandler.swift */; };
 		C2CBDA212E9686E200C4097B /* Todo+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA202E9686C900C4097B /* Todo+Preview.swift */; };
+		C2CBDA232E9687A300C4097B /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA222E9687A300C4097B /* TestData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		C2CBDA1C2E96827000C4097B /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		C2CBDA1E2E96853100C4097B /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		C2CBDA202E9686C900C4097B /* Todo+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+Preview.swift"; sourceTree = "<group>"; };
+		C2CBDA222E9687A300C4097B /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				C2CBDA202E9686C900C4097B /* Todo+Preview.swift */,
+				C2CBDA222E9687A300C4097B /* TestData.swift */,
 			);
 			path = PreviewContent;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				C2CBDA0F2E967F3100C4097B /* TodoListRouter.swift in Sources */,
 				C2CBDA1F2E96853100C4097B /* ErrorHandler.swift in Sources */,
 				C2CBDA152E96805500C4097B /* TodoDetailView.swift in Sources */,
+				C2CBDA232E9687A300C4097B /* TestData.swift in Sources */,
 				C2CBDA0B2E967F0E00C4097B /* TodoListPresenter.swift in Sources */,
 				C2CBD9F72E967B6800C4097B /* ContentView.swift in Sources */,
 				C2CBDA192E96820500C4097B /* TodoListRowView.swift in Sources */,
