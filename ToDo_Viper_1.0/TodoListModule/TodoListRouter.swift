@@ -10,6 +10,6 @@ import SwiftUI
 class TodoListRouter {
     func makeDetailView(for todo: Todo, provider: TodosProvider) -> some View {
         let presenter = TodoListPresenter(interactor: TodoListInteractor(provider: provider))
-        return Text("Hello")
+        return Text("hello")
     }
 }

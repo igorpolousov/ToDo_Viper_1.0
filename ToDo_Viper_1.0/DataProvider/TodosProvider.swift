@@ -13,8 +13,14 @@ import Combine
 class TodosProvider: ObservableObject {
     
     @Published var todos: [Todo] = []
-    @Published var seatchText: String = ""
+    @Published var searchText: String = ""
     @Published var filteredTodos: [Todo] = []
+    
+    private var cancellables = Set<AnyCancellable>()
+    
+    init() {
+        addSubscribers()
+    }
     
     // Create new todo with default todo, notes, data values
     func createTodo() {
@@ -34,22 +40,39 @@ class TodosProvider: ObservableObject {
         }
         return id
     }
-}
-
-
-
-#if DEBUG
-extension TodosProvider {
-    static var mockTodoProvider: TodosProvider {
-        let provider = TodosProvider()
-        let decoder = JSONDecoder()
-        do {
-            let decoded = try decoder.decode(Todos.self, from: testTodosData)
-            provider.todos = decoded.todos
-        } catch let error {
-            print("Unable to get mock data \(error)")
+    
+    var isSeaching: Bool {
+        !searchText.isEmpty
+    }
+    
+    // Searchinig in tasks
+    private func addSubscribers() {
+        $searchText
+            .debounce(for: 0.3, scheduler: DispatchQueue.main)
+            .sink { [weak self] searchText in
+                self?.filteredTodosSearch(searchText: searchText)
+            }
+            .store(in: &cancellables)
+    }
+    
+    private func filteredTodosSearch(searchText: String) {
+        guard !searchText.isEmpty else {
+            self.filteredTodos = []
+            return
         }
-        return provider
+        
+        let filteredResult = self.todos.filter { todo in
+            let search = searchText.lowercased()
+            let todoNameContainsSearch = todo.todo.lowercased().contains(search)
+            let todoNotesContainsSearch = todo.notes.lowercased().contains(search)
+            return todoNameContainsSearch || todoNotesContainsSearch
+        }
+        
+        self.filteredTodos = filteredResult
     }
 }
-#endif
+
+
+
+
+
