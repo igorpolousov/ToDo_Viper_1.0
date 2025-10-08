@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C2CBD9F62E967B6800C4097B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CBD9F22E967B6800C4097B /* Assets.xcassets */; };
+		C2CBD9F72E967B6800C4097B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD9F32E967B6800C4097B /* ContentView.swift */; };
+		C2CBD9F82E967B6800C4097B /* ToDo_Viper_1_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD9F42E967B6800C4097B /* ToDo_Viper_1_0App.swift */; };
+		C2CBD9FB2E967B6C00C4097B /* ToDo_Viper_1_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD9F92E967B6C00C4097B /* ToDo_Viper_1_0Tests.swift */; };
+		C2CBD9FF2E967B7000C4097B /* ToDo_Viper_1_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD9FC2E967B7000C4097B /* ToDo_Viper_1_0UITests.swift */; };
+		C2CBDA002E967B7000C4097B /* ToDo_Viper_1_0UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD9FD2E967B7000C4097B /* ToDo_Viper_1_0UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C2CBD9D62E967B5500C4097B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,25 +36,13 @@
 		C2CBD9C82E967B5300C4097B /* ToDo_Viper_1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo_Viper_1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBD9D52E967B5500C4097B /* ToDo_Viper_1.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDo_Viper_1.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBD9DF2E967B5500C4097B /* ToDo_Viper_1.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDo_Viper_1.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CBD9F22E967B6800C4097B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2CBD9F32E967B6800C4097B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C2CBD9F42E967B6800C4097B /* ToDo_Viper_1_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo_Viper_1_0App.swift; sourceTree = "<group>"; };
+		C2CBD9F92E967B6C00C4097B /* ToDo_Viper_1_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo_Viper_1_0Tests.swift; sourceTree = "<group>"; };
+		C2CBD9FC2E967B7000C4097B /* ToDo_Viper_1_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo_Viper_1_0UITests.swift; sourceTree = "<group>"; };
+		C2CBD9FD2E967B7000C4097B /* ToDo_Viper_1_0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo_Viper_1_0UITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C2CBD9CA2E967B5300C4097B /* ToDo_Viper_1.0 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ToDo_Viper_1.0;
-			sourceTree = "<group>";
-		};
-		C2CBD9D82E967B5500C4097B /* ToDo_Viper_1.0Tests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ToDo_Viper_1.0Tests;
-			sourceTree = "<group>";
-		};
-		C2CBD9E22E967B5500C4097B /* ToDo_Viper_1.0UITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ToDo_Viper_1.0UITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C2CBD9C52E967B5300C4097B /* Frameworks */ = {
@@ -75,9 +72,9 @@
 		C2CBD9BF2E967B5300C4097B = {
 			isa = PBXGroup;
 			children = (
-				C2CBD9CA2E967B5300C4097B /* ToDo_Viper_1.0 */,
-				C2CBD9D82E967B5500C4097B /* ToDo_Viper_1.0Tests */,
-				C2CBD9E22E967B5500C4097B /* ToDo_Viper_1.0UITests */,
+				C2CBD9F52E967B6800C4097B /* ToDo_Viper_1.0 */,
+				C2CBD9FA2E967B6C00C4097B /* ToDo_Viper_1.0Tests */,
+				C2CBD9FE2E967B7000C4097B /* ToDo_Viper_1.0UITests */,
 				C2CBD9C92E967B5300C4097B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +87,33 @@
 				C2CBD9DF2E967B5500C4097B /* ToDo_Viper_1.0UITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C2CBD9F52E967B6800C4097B /* ToDo_Viper_1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBD9F22E967B6800C4097B /* Assets.xcassets */,
+				C2CBD9F32E967B6800C4097B /* ContentView.swift */,
+				C2CBD9F42E967B6800C4097B /* ToDo_Viper_1_0App.swift */,
+			);
+			path = ToDo_Viper_1.0;
+			sourceTree = "<group>";
+		};
+		C2CBD9FA2E967B6C00C4097B /* ToDo_Viper_1.0Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBD9F92E967B6C00C4097B /* ToDo_Viper_1_0Tests.swift */,
+			);
+			path = ToDo_Viper_1.0Tests;
+			sourceTree = "<group>";
+		};
+		C2CBD9FE2E967B7000C4097B /* ToDo_Viper_1.0UITests */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBD9FC2E967B7000C4097B /* ToDo_Viper_1_0UITests.swift */,
+				C2CBD9FD2E967B7000C4097B /* ToDo_Viper_1_0UITestsLaunchTests.swift */,
+			);
+			path = ToDo_Viper_1.0UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +130,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C2CBD9CA2E967B5300C4097B /* ToDo_Viper_1.0 */,
 			);
 			name = ToDo_Viper_1.0;
 			packageProductDependencies = (
@@ -130,9 +151,6 @@
 			dependencies = (
 				C2CBD9D72E967B5500C4097B /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				C2CBD9D82E967B5500C4097B /* ToDo_Viper_1.0Tests */,
-			);
 			name = ToDo_Viper_1.0Tests;
 			packageProductDependencies = (
 			);
@@ -152,9 +170,6 @@
 			);
 			dependencies = (
 				C2CBD9E12E967B5500C4097B /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				C2CBD9E22E967B5500C4097B /* ToDo_Viper_1.0UITests */,
 			);
 			name = ToDo_Viper_1.0UITests;
 			packageProductDependencies = (
@@ -212,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CBD9F62E967B6800C4097B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +252,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CBD9F72E967B6800C4097B /* ContentView.swift in Sources */,
+				C2CBD9F82E967B6800C4097B /* ToDo_Viper_1_0App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CBD9FB2E967B6C00C4097B /* ToDo_Viper_1_0Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CBD9FF2E967B7000C4097B /* ToDo_Viper_1_0UITests.swift in Sources */,
+				C2CBDA002E967B7000C4097B /* ToDo_Viper_1_0UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +426,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -413,12 +435,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "online.swampios.ToDo-Viper-1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -437,6 +463,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,12 +472,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "online.swampios.ToDo-Viper-1-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -462,16 +493,20 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C3M56A453W;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "online.swampios.ToDo-Viper-1-0Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDo_Viper_1.0.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDo_Viper_1.0";
 			};
 			name = Debug;
@@ -484,16 +519,20 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C3M56A453W;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "online.swampios.ToDo-Viper-1-0Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDo_Viper_1.0.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDo_Viper_1.0";
 			};
 			name = Release;
@@ -505,10 +544,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C3M56A453W;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "online.swampios.ToDo-Viper-1-0UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
@@ -525,10 +569,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C3M56A453W;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "online.swampios.ToDo-Viper-1-0UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
