@@ -8,5 +8,11 @@
 import Foundation
 
 class TodoDetailInteractor {
+    let todo: Todo
+    let provider: TodosProvider
     
+    init(todo: Todo, provider: TodosProvider) {
+        self.todo = todo
+        self.provider = provider
+    }
 }

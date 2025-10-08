@@ -5,8 +5,20 @@
 //  Created by Igor Polousov on 08.10.2025.
 //
 
-import Foundation
+import SwiftUI
+import Combine
 
-class TodoDetailPresenter {
+class TodoDetailPresenter: ObservableObject {
     
+     let interactor: TodoDetailInteractor
+     let router: TodoDetailRouter
+    
+    @Published var todo: Todo
+    
+    init(interactor: TodoDetailInteractor, router: TodoDetailRouter) {
+        self.interactor = interactor
+        self.router = router
+        
+        todo = interactor.todo
+    }
 }

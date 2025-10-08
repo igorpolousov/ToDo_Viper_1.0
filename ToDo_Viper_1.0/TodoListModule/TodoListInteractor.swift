@@ -9,4 +9,13 @@ import Foundation
 
 class TodoListInteractor {
     
+    let provider: TodosProvider
+    
+    init(provider: TodosProvider) {
+        self.provider = provider
+    }
+    
+    func addNewTodo() {
+        provider.createTodo()
+    }
 }

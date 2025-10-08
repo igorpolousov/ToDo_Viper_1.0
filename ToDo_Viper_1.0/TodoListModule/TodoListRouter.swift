@@ -5,8 +5,11 @@
 //  Created by Igor Polousov on 08.10.2025.
 //
 
-import Foundation
+import SwiftUI
 
 class TodoListRouter {
-    
+    func makeDetailView(for todo: Todo, provider: TodosProvider) -> some View {
+        let presenter = TodoListPresenter(interactor: TodoListInteractor(provider: provider))
+        return Text("Hello")
+    }
 }

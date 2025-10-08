@@ -134,6 +134,7 @@
 		C2CBD9F52E967B6800C4097B /* ToDo_Viper_1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				C2CBD9F42E967B6800C4097B /* ToDo_Viper_1_0App.swift */,
 				C2CBD9F32E967B6800C4097B /* ContentView.swift */,
 				C2CBDA012E967C8700C4097B /* TodoListModule */,
 				C2CBDA022E967CCB00C4097B /* TodoDetail+EditlModule */,
@@ -143,7 +144,6 @@
 				C2CBDA062E967D4200C4097B /* Resources */,
 				C2CBDA072E967D8600C4097B /* PreviewContent */,
 				C2CBD9F22E967B6800C4097B /* Assets.xcassets */,
-				C2CBD9F42E967B6800C4097B /* ToDo_Viper_1_0App.swift */,
 			);
 			path = ToDo_Viper_1.0;
 			sourceTree = "<group>";

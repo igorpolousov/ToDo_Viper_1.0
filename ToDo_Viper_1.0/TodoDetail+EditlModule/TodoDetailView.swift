@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct TodoDetailView: View {
+    
+    @ObservedObject var presenter: TodoDetailPresenter
+    
     var body: some View {
-        Text("Hello viper")
+        Text("\(presenter.todo.todo)")
     }
 }

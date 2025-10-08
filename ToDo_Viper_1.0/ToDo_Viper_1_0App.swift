@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ToDo_Viper_1_0App: App {
+    
+    let provider = TodosProvider()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(provider)
         }
     }
 }
