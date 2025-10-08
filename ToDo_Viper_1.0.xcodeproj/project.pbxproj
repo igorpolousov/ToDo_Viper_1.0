@@ -21,6 +21,7 @@
 		C2CBDA132E96803600C4097B /* TodoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA122E96803600C4097B /* TodoDetailPresenter.swift */; };
 		C2CBDA152E96805500C4097B /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA142E96805500C4097B /* TodoDetailView.swift */; };
 		C2CBDA172E96807100C4097B /* TodoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA162E96807100C4097B /* TodoDetailRouter.swift */; };
+		C2CBDA192E96820500C4097B /* TodoListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA182E96820500C4097B /* TodoListRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C2CBDA122E96803600C4097B /* TodoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailPresenter.swift; sourceTree = "<group>"; };
 		C2CBDA142E96805500C4097B /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
 		C2CBDA162E96807100C4097B /* TodoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailRouter.swift; sourceTree = "<group>"; };
+		C2CBDA182E96820500C4097B /* TodoListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +113,7 @@
 				C2CBD9F32E967B6800C4097B /* ContentView.swift */,
 				C2CBDA012E967C8700C4097B /* TodoListModule */,
 				C2CBDA022E967CCB00C4097B /* TodoDetail+EditlModule */,
-				C2CBDA032E967CFC00C4097B /* FunctionalViews */,
+				C2CBDA032E967CFC00C4097B /* Views */,
 				C2CBDA042E967D1A00C4097B /* Entities */,
 				C2CBDA052E967D2500C4097B /* DataProvider */,
 				C2CBDA062E967D4200C4097B /* Resources */,
@@ -161,11 +163,12 @@
 			path = "TodoDetail+EditlModule";
 			sourceTree = "<group>";
 		};
-		C2CBDA032E967CFC00C4097B /* FunctionalViews */ = {
+		C2CBDA032E967CFC00C4097B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C2CBDA182E96820500C4097B /* TodoListRowView.swift */,
 			);
-			path = FunctionalViews;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C2CBDA042E967D1A00C4097B /* Entities */ = {
@@ -336,6 +339,7 @@
 				C2CBDA152E96805500C4097B /* TodoDetailView.swift in Sources */,
 				C2CBDA0B2E967F0E00C4097B /* TodoListPresenter.swift in Sources */,
 				C2CBD9F72E967B6800C4097B /* ContentView.swift in Sources */,
+				C2CBDA192E96820500C4097B /* TodoListRowView.swift in Sources */,
 				C2CBDA0D2E967F2000C4097B /* TodoListView.swift in Sources */,
 				C2CBDA092E967EFA00C4097B /* TodoListInteractor.swift in Sources */,
 				C2CBDA132E96803600C4097B /* TodoDetailPresenter.swift in Sources */,
