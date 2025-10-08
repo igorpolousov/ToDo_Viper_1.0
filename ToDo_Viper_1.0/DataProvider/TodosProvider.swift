@@ -34,5 +34,22 @@ class TodosProvider: ObservableObject {
         }
         return id
     }
-    
 }
+
+
+
+#if DEBUG
+extension TodosProvider {
+    static var mockTodoProvider: TodosProvider {
+        let provider = TodosProvider()
+        let decoder = JSONDecoder()
+        do {
+            let decoded = try decoder.decode(Todos.self, from: testTodosData)
+            provider.todos = decoded.todos
+        } catch let error {
+            print("Unable to get mock data \(error)")
+        }
+        return provider
+    }
+}
+#endif
