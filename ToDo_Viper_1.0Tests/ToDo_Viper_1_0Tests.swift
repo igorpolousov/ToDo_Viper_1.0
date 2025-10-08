@@ -29,6 +29,21 @@ final class ToDo_Viper_1_0Tests: XCTestCase {
         XCTAssertEqual(decoded.todos.count, 6)
     }
     
+    // Testing TodosProvider creates new todo with default values and add it to todos Array
+    func testingTodosProviderCreatesNewTodo() throws {
+       let provider = TodosProvider()
+        provider.createTodo()
+        let todo = provider.todos[0]
+        
+        XCTAssertEqual(provider.todos.count, 1)
+        XCTAssertEqual(todo.id, 10)
+        XCTAssertEqual(todo.completed, false)
+        XCTAssertEqual(todo.todo, "Add new todo name")
+        XCTAssertEqual(todo.notes, "Add some notes")
+        XCTAssertEqual(todo.userId, 1034)
+ 
+    }
+    
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

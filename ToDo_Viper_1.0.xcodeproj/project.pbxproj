@@ -31,6 +31,11 @@
 		C2CBDA282E968D1F00C4097B /* SFProText.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2CBDA272E968D1F00C4097B /* SFProText.ttf */; };
 		C2CBDA2A2E968D3E00C4097B /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2CBDA292E968D3E00C4097B /* SF-Pro.ttf */; };
 		C2CBDA2C2E968D6F00C4097B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA2B2E968D6F00C4097B /* Theme.swift */; };
+		C2CBDA2E2E96926700C4097B /* TodosProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA2D2E96926700C4097B /* TodosProvider.swift */; };
+		C2CBDA322E969D3B00C4097B /* TodosProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA2D2E96926700C4097B /* TodosProvider.swift */; };
+		C2CBDA332E969DC000C4097B /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA1C2E96827000C4097B /* Todo.swift */; };
+		C2CBDA342E969DC800C4097B /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA1A2E96825D00C4097B /* Todos.swift */; };
+		C2CBDA352E969DFF00C4097B /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA1E2E96853100C4097B /* ErrorHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +83,7 @@
 		C2CBDA272E968D1F00C4097B /* SFProText.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFProText.ttf; sourceTree = "<group>"; };
 		C2CBDA292E968D3E00C4097B /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		C2CBDA2B2E968D6F00C4097B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C2CBDA2D2E96926700C4097B /* TodosProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +208,7 @@
 		C2CBDA052E967D2500C4097B /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				C2CBDA2D2E96926700C4097B /* TodosProvider.swift */,
 			);
 			path = DataProvider;
 			sourceTree = "<group>";
@@ -373,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CBDA2E2E96926700C4097B /* TodosProvider.swift in Sources */,
 				C2CBDA0F2E967F3100C4097B /* TodoListRouter.swift in Sources */,
 				C2CBDA1F2E96853100C4097B /* ErrorHandler.swift in Sources */,
 				C2CBDA152E96805500C4097B /* TodoDetailView.swift in Sources */,
@@ -397,7 +405,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CBDA322E969D3B00C4097B /* TodosProvider.swift in Sources */,
+				C2CBDA332E969DC000C4097B /* Todo.swift in Sources */,
+				C2CBDA352E969DFF00C4097B /* ErrorHandler.swift in Sources */,
 				C2CBD9FB2E967B6C00C4097B /* ToDo_Viper_1_0Tests.swift in Sources */,
+				C2CBDA342E969DC800C4097B /* Todos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

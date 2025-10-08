@@ -9,10 +9,10 @@ import Foundation
 
 struct Todo: Identifiable {
     let id: Int
-    let todo: String
-    let notes: String = ""
+    var todo: String
+    var notes: String = ""
     let time: Date = Date.now
-    let completed: Bool
+    var completed: Bool
     let userId: Int
 }
 
