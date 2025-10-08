@@ -27,6 +27,7 @@
 		C2CBDA1F2E96853100C4097B /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA1E2E96853100C4097B /* ErrorHandler.swift */; };
 		C2CBDA212E9686E200C4097B /* Todo+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA202E9686C900C4097B /* Todo+Preview.swift */; };
 		C2CBDA232E9687A300C4097B /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA222E9687A300C4097B /* TestData.swift */; };
+		C2CBDA262E968CA000C4097B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CBDA252E968CA000C4097B /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		C2CBDA1E2E96853100C4097B /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		C2CBDA202E9686C900C4097B /* Todo+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+Preview.swift"; sourceTree = "<group>"; };
 		C2CBDA222E9687A300C4097B /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		C2CBDA252E968CA000C4097B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 		C2CBDA062E967D4200C4097B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C2CBDA242E968C8E00C4097B /* Theme */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -212,6 +215,14 @@
 				C2CBDA222E9687A300C4097B /* TestData.swift */,
 			);
 			path = PreviewContent;
+			sourceTree = "<group>";
+		};
+		C2CBDA242E968C8E00C4097B /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBDA252E968CA000C4097B /* Colors.xcassets */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2CBD9F62E967B6800C4097B /* Assets.xcassets in Resources */,
+				C2CBDA262E968CA000C4097B /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

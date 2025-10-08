@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TodoListRowView: View {
+    @State var todo: Todo
+    @State private var isShowDetailView: Bool
+    
     var body: some View {
         Text("Hello world")
     }
