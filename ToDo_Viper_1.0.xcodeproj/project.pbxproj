@@ -13,6 +13,10 @@
 		C2CBD9FB2E967B6C00C4097B /* ToDo_Viper_1_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD9F92E967B6C00C4097B /* ToDo_Viper_1_0Tests.swift */; };
 		C2CBD9FF2E967B7000C4097B /* ToDo_Viper_1_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD9FC2E967B7000C4097B /* ToDo_Viper_1_0UITests.swift */; };
 		C2CBDA002E967B7000C4097B /* ToDo_Viper_1_0UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBD9FD2E967B7000C4097B /* ToDo_Viper_1_0UITestsLaunchTests.swift */; };
+		C2CBDA092E967EFA00C4097B /* TodoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA082E967EFA00C4097B /* TodoListInteractor.swift */; };
+		C2CBDA0B2E967F0E00C4097B /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA0A2E967F0E00C4097B /* TodoListPresenter.swift */; };
+		C2CBDA0D2E967F2000C4097B /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA0C2E967F2000C4097B /* TodoListView.swift */; };
+		C2CBDA0F2E967F3100C4097B /* TodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA0E2E967F3100C4097B /* TodoListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,10 @@
 		C2CBD9F92E967B6C00C4097B /* ToDo_Viper_1_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo_Viper_1_0Tests.swift; sourceTree = "<group>"; };
 		C2CBD9FC2E967B7000C4097B /* ToDo_Viper_1_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo_Viper_1_0UITests.swift; sourceTree = "<group>"; };
 		C2CBD9FD2E967B7000C4097B /* ToDo_Viper_1_0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo_Viper_1_0UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C2CBDA082E967EFA00C4097B /* TodoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractor.swift; sourceTree = "<group>"; };
+		C2CBDA0A2E967F0E00C4097B /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
+		C2CBDA0C2E967F2000C4097B /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		C2CBDA0E2E967F3100C4097B /* TodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +100,15 @@
 		C2CBD9F52E967B6800C4097B /* ToDo_Viper_1.0 */ = {
 			isa = PBXGroup;
 			children = (
-				C2CBD9F22E967B6800C4097B /* Assets.xcassets */,
 				C2CBD9F32E967B6800C4097B /* ContentView.swift */,
+				C2CBDA012E967C8700C4097B /* TodoListModule */,
+				C2CBDA022E967CCB00C4097B /* Detail+EditlModule */,
+				C2CBDA032E967CFC00C4097B /* FunctionalViews */,
+				C2CBDA042E967D1A00C4097B /* Entities */,
+				C2CBDA052E967D2500C4097B /* DataProvider */,
+				C2CBDA062E967D4200C4097B /* Resources */,
+				C2CBDA072E967D8600C4097B /* PreviewContent */,
+				C2CBD9F22E967B6800C4097B /* Assets.xcassets */,
 				C2CBD9F42E967B6800C4097B /* ToDo_Viper_1_0App.swift */,
 			);
 			path = ToDo_Viper_1.0;
@@ -114,6 +129,59 @@
 				C2CBD9FD2E967B7000C4097B /* ToDo_Viper_1_0UITestsLaunchTests.swift */,
 			);
 			path = ToDo_Viper_1.0UITests;
+			sourceTree = "<group>";
+		};
+		C2CBDA012E967C8700C4097B /* TodoListModule */ = {
+			isa = PBXGroup;
+			children = (
+				C2CBDA082E967EFA00C4097B /* TodoListInteractor.swift */,
+				C2CBDA0A2E967F0E00C4097B /* TodoListPresenter.swift */,
+				C2CBDA0C2E967F2000C4097B /* TodoListView.swift */,
+				C2CBDA0E2E967F3100C4097B /* TodoListRouter.swift */,
+			);
+			path = TodoListModule;
+			sourceTree = "<group>";
+		};
+		C2CBDA022E967CCB00C4097B /* Detail+EditlModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Detail+EditlModule";
+			sourceTree = "<group>";
+		};
+		C2CBDA032E967CFC00C4097B /* FunctionalViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FunctionalViews;
+			sourceTree = "<group>";
+		};
+		C2CBDA042E967D1A00C4097B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C2CBDA052E967D2500C4097B /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		C2CBDA062E967D4200C4097B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C2CBDA072E967D8600C4097B /* PreviewContent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PreviewContent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CBDA0F2E967F3100C4097B /* TodoListRouter.swift in Sources */,
+				C2CBDA0B2E967F0E00C4097B /* TodoListPresenter.swift in Sources */,
 				C2CBD9F72E967B6800C4097B /* ContentView.swift in Sources */,
+				C2CBDA0D2E967F2000C4097B /* TodoListView.swift in Sources */,
+				C2CBDA092E967EFA00C4097B /* TodoListInteractor.swift in Sources */,
 				C2CBD9F82E967B6800C4097B /* ToDo_Viper_1_0App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
