@@ -30,6 +30,7 @@
 		C2CBDA262E968CA000C4097B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CBDA252E968CA000C4097B /* Colors.xcassets */; };
 		C2CBDA282E968D1F00C4097B /* SFProText.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2CBDA272E968D1F00C4097B /* SFProText.ttf */; };
 		C2CBDA2A2E968D3E00C4097B /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2CBDA292E968D3E00C4097B /* SF-Pro.ttf */; };
+		C2CBDA2C2E968D6F00C4097B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA2B2E968D6F00C4097B /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		C2CBDA252E968CA000C4097B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C2CBDA272E968D1F00C4097B /* SFProText.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFProText.ttf; sourceTree = "<group>"; };
 		C2CBDA292E968D3E00C4097B /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
+		C2CBDA2B2E968D6F00C4097B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 				C2CBDA252E968CA000C4097B /* Colors.xcassets */,
 				C2CBDA272E968D1F00C4097B /* SFProText.ttf */,
 				C2CBDA292E968D3E00C4097B /* SF-Pro.ttf */,
+				C2CBDA2B2E968D6F00C4097B /* Theme.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				C2CBDA212E9686E200C4097B /* Todo+Preview.swift in Sources */,
 				C2CBDA1D2E96827000C4097B /* Todo.swift in Sources */,
 				C2CBDA1B2E96825D00C4097B /* Todos.swift in Sources */,
+				C2CBDA2C2E968D6F00C4097B /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

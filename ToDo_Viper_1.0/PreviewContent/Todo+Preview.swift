@@ -8,7 +8,7 @@
 import Foundation
 
 extension Todo {
-    static var preview: Todo {
+    static var previewTodo: Todo {
         let todo = Todo(id: 10, todo: "Preview Todo", completed: false, userId: 1035)
         return todo
     }
