@@ -67,11 +67,14 @@ final class ToDo_Viper_1_0Tests: XCTestCase {
         XCTAssertEqual(cdtodoModel.userId, 152)
     }
     
-
-    // CoreData tests
     
-    func testCoreDataStackSavesData() throws {
-       
+    func testTodosProviderSavesContext() throws {
+        let provider = TodosProvider()
+        let decoder = JSONDecoder()
+        let decoded = try decoder.decode(Todos.self, from: testTodosData)
+        let todos = decoded.todos
+        provider.saveTodosToCoreData(todos)
+        
     }
     
     

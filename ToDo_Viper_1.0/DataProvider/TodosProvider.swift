@@ -29,6 +29,7 @@ class TodosProvider: ObservableObject {
         var newTodo = Todo(id: idForNewTodo(), todo: "Add new todo name",completed: false, userId: 1034)
         newTodo.notes = "Add some notes"
         todos.insert(newTodo, at: 0)
+        coreDataStack.saveContext()
     }
     
     // Find id for new todo
@@ -91,6 +92,23 @@ class TodosProvider: ObservableObject {
             cdtModels.append(cdtModel)
         }
         coreDataStack.saveContext()
+    }
+    
+    func readTodosFromCoreData() {
+        let fetchRequest: NSFetchRequest<CDTodoModel> = CDTodoModel.fetchRequest()
+        var asyncFetchRequest: NSAsynchronousFetchRequest<CDTodoModel>?
+        asyncFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest){ [weak self] (result: NSAsynchronousFetchResult) in
+            guard let result = result.finalResult else { return }
+            // save data from core data
+        }
+        
+        do {
+            guard let asyncFetchRequest = asyncFetchRequest else { return }
+            try self .coreDataStack.managedContext.execute(asyncFetchRequest)
+        } catch let error as NSError {
+            print("Unable to laod data from Core Data store \(error.localizedDescription)")
+        }
+        
     }
     
 }
