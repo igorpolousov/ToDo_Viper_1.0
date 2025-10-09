@@ -216,6 +216,8 @@
 		C2CBDA062E967D4200C4097B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C2CBDA372E97EA4300C4097B /* DataDownloader */,
+				C2CBDA362E97EA3600C4097B /* CoreData */,
 				C2CBDA242E968C8E00C4097B /* Theme */,
 			);
 			path = Resources;
@@ -239,6 +241,20 @@
 				C2CBDA2B2E968D6F00C4097B /* Theme.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		C2CBDA362E97EA3600C4097B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C2CBDA372E97EA4300C4097B /* DataDownloader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataDownloader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
