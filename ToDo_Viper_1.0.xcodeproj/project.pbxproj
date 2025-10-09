@@ -36,6 +36,8 @@
 		C2CBDA332E969DC000C4097B /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA1C2E96827000C4097B /* Todo.swift */; };
 		C2CBDA342E969DC800C4097B /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA1A2E96825D00C4097B /* Todos.swift */; };
 		C2CBDA352E969DFF00C4097B /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA1E2E96853100C4097B /* ErrorHandler.swift */; };
+		C2CBDA392E97EA8600C4097B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA382E97EA8600C4097B /* CoreDataStack.swift */; };
+		C2CBDA3A2E97EA8600C4097B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CBDA382E97EA8600C4097B /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,7 @@
 		C2CBDA292E968D3E00C4097B /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		C2CBDA2B2E968D6F00C4097B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C2CBDA2D2E96926700C4097B /* TodosProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosProvider.swift; sourceTree = "<group>"; };
+		C2CBDA382E97EA8600C4097B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +249,7 @@
 		C2CBDA362E97EA3600C4097B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				C2CBDA382E97EA8600C4097B /* CoreDataStack.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -404,6 +408,7 @@
 				C2CBDA0B2E967F0E00C4097B /* TodoListPresenter.swift in Sources */,
 				C2CBD9F72E967B6800C4097B /* ContentView.swift in Sources */,
 				C2CBDA192E96820500C4097B /* TodoListRowView.swift in Sources */,
+				C2CBDA392E97EA8600C4097B /* CoreDataStack.swift in Sources */,
 				C2CBDA0D2E967F2000C4097B /* TodoListView.swift in Sources */,
 				C2CBDA092E967EFA00C4097B /* TodoListInteractor.swift in Sources */,
 				C2CBDA132E96803600C4097B /* TodoDetailPresenter.swift in Sources */,
@@ -424,6 +429,7 @@
 				C2CBDA322E969D3B00C4097B /* TodosProvider.swift in Sources */,
 				C2CBDA332E969DC000C4097B /* Todo.swift in Sources */,
 				C2CBDA352E969DFF00C4097B /* ErrorHandler.swift in Sources */,
+				C2CBDA3A2E97EA8600C4097B /* CoreDataStack.swift in Sources */,
 				C2CBD9FB2E967B6C00C4097B /* ToDo_Viper_1_0Tests.swift in Sources */,
 				C2CBDA342E969DC800C4097B /* Todos.swift in Sources */,
 			);
