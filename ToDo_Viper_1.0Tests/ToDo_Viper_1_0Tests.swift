@@ -54,6 +54,13 @@ final class ToDo_Viper_1_0Tests: XCTestCase {
     }
     
 
+    // CoreDataStack tests
+    
+    func testCoreDataStackCreatesContainer() throws {
+        let stack = CoreDataStack(modelName: "Hello world")
+        
+       
+    }
     
     
 
