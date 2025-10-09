@@ -17,3 +17,5 @@ extension Color {
     public static let themeAccent: Color = Color("AccentColor")
     public static let themeGray: Color = Color("TaskCircleColor")
 }
+
+

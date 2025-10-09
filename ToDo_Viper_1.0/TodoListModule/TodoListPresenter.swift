@@ -57,6 +57,7 @@ class TodoListPresenter: ObservableObject {
     }
     
     
+    
     // Searchinig in tasks
     private func addSubscribers() {
         $searchText
