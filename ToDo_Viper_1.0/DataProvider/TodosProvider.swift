@@ -7,10 +7,12 @@
 
 import Foundation
 import Combine
-
+import CoreData
 
 
 class TodosProvider: ObservableObject {
+    
+    let coreDataStack = CoreDataStack(modelName: "ToDo_Viper_1.0")
     
     @Published var todos: [Todo] = []
     @Published var searchText: String = ""
@@ -70,6 +72,27 @@ class TodosProvider: ObservableObject {
         
         self.filteredTodos = filteredResult
     }
+    
+    func convertTodoToCDTodoModel(_ todo: Todo) -> CDTodoModel {
+        let cdtodoModel = CDTodoModel(context: coreDataStack.managedContext)
+        cdtodoModel.todo = todo.todo
+        cdtodoModel.notes = todo.notes
+        cdtodoModel.id = Double(todo.id)
+        cdtodoModel.time = todo.time
+        cdtodoModel.userId = Double(todo.userId)
+        cdtodoModel.completed = todo.completed
+        return cdtodoModel
+    }
+    
+    func saveTodosToCoreData(_ todos: [Todo]) {
+        var cdtModels: [CDTodoModel] = []
+        for todo in todos {
+            let cdtModel = convertTodoToCDTodoModel(todo)
+            cdtModels.append(cdtModel)
+        }
+        coreDataStack.saveContext()
+    }
+    
 }
 
 

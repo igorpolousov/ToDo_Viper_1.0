@@ -4,7 +4,7 @@
 //
 //  Created by Igor Polousov on 09.10.2025.
 //
-
+import Foundation
 import CoreData
 import Combine
 

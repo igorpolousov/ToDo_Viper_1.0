@@ -36,7 +36,7 @@ final class ToDo_Viper_1_0Tests: XCTestCase {
         let todo = provider.todos[0]
         
         XCTAssertEqual(provider.todos.count, 1)
-        XCTAssertEqual(todo.id, 10)
+        XCTAssertEqual(todo.id, 1)
         XCTAssertEqual(todo.completed, false)
         XCTAssertEqual(todo.todo, "Add new todo name")
         XCTAssertEqual(todo.notes, "Add some notes")
@@ -53,12 +53,24 @@ final class ToDo_Viper_1_0Tests: XCTestCase {
         XCTAssertEqual(provider.todos[0].id, 2)
     }
     
-
-    // CoreDataStack tests
-    
-    func testCoreDataStackCreatesContainer() throws {
-        let stack = CoreDataStack(modelName: "Hello world")
+    // Testing convert Todo to CDTodoModel
+    func testTodosProviderConvertsTodoToCDTodoModel() throws {
+        let provider = TodosProvider()
+        let decoder = JSONDecoder()
+        let todo = try decoder.decode(Todo.self, from: testTodoData)
+        let cdtodoModel = provider.convertTodoToCDTodoModel(todo)
         
+        XCTAssertEqual(cdtodoModel.completed, false)
+        XCTAssertEqual(cdtodoModel.id, 1)
+        XCTAssertEqual(cdtodoModel.notes, "")
+        XCTAssertEqual(cdtodoModel.todo, "Do something nice for someone you care about")
+        XCTAssertEqual(cdtodoModel.userId, 152)
+    }
+    
+
+    // CoreData tests
+    
+    func testCoreDataStackSavesData() throws {
        
     }
     
