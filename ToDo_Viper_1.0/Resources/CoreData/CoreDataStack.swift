@@ -30,6 +30,7 @@ class CoreDataStack: ObservableObject {
         return self.storeContailner.viewContext
     }()
     
+    
     func saveContext() {
         guard managedContext.hasChanges else { return }
         do {
