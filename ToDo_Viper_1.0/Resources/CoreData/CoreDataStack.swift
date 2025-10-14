@@ -16,7 +16,7 @@ class CoreDataStack: ObservableObject {
         self.modelName = modelName
     }
     
-    private lazy var storeContailner: NSPersistentContainer = {
+    public lazy var storeContailner: NSPersistentContainer = {
         let container = NSPersistentContainer(name: modelName)
         container.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
