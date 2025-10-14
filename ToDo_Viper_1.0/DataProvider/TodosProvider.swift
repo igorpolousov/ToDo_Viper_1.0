@@ -17,6 +17,7 @@ class TodosProvider: ObservableObject {
     @Published var todos: [Todo] = []
     @Published var searchText: String = ""
     @Published var filteredTodos: [Todo] = []
+    @Published var cdtodos: [CDTodoModel] = []
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -100,6 +101,7 @@ class TodosProvider: ObservableObject {
         asyncFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest){ [weak self] (result: NSAsynchronousFetchResult) in
             guard let result = result.finalResult else { return }
             // save data from core data
+            self?.cdtodos = result
         }
         
         do {
