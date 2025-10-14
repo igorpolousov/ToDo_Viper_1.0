@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import ToDo_Viper_1_0
 
 class TestCoreDataStack: CoreDataStack {
     override init(modelName: String) {
