@@ -30,11 +30,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:ToDo_Viper_1.0.xctestplan"
+            reference = "container:Hello.xctestplan"
             default = "YES">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:Productivity.xctestplan">
          </TestPlanReference>
       </TestPlans>
       <Testables>

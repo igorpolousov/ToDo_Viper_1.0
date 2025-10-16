@@ -67,6 +67,7 @@
 /* Begin PBXFileReference section */
 		C264787D2E9D41FD005ECFD2 /* ToDo_Viper_1.0.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo_Viper_1.0.xctestplan; sourceTree = "<group>"; };
 		C264787F2E9E1B1A005ECFD2 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
+		C264788E2EA13B6B005ECFD2 /* Hello.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Hello.xctestplan; sourceTree = "<group>"; };
 		C2CBD9C82E967B5300C4097B /* ToDo_Viper_1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo_Viper_1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBD9D52E967B5500C4097B /* ToDo_Viper_1.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDo_Viper_1.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CBD9DF2E967B5500C4097B /* ToDo_Viper_1.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDo_Viper_1.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +130,7 @@
 		C2CBD9BF2E967B5300C4097B = {
 			isa = PBXGroup;
 			children = (
+				C264788E2EA13B6B005ECFD2 /* Hello.xctestplan */,
 				C2CBD9F52E967B6800C4097B /* ToDo_Viper_1.0 */,
 				C2CBD9FA2E967B6C00C4097B /* ToDo_Viper_1.0Tests */,
 				C2CBD9FE2E967B7000C4097B /* ToDo_Viper_1.0UITests */,

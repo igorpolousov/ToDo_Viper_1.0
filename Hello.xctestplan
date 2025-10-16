@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "97A579C3-E560-4F5B-AD59-CC4FA33107A0",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ToDo_Viper_1.0.xcodeproj",
+        "identifier" : "C2CBD9DE2E967B5500C4097B",
+        "name" : "ToDo_Viper_1.0UITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:ToDo_Viper_1.0.xcodeproj",
+        "identifier" : "C2CBD9D42E967B5500C4097B",
+        "name" : "ToDo_Viper_1.0Tests"
+      }
+    }
+  ],
+  "version" : 1
+}

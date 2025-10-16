@@ -14,7 +14,8 @@
       "containerPath" : "container:ToDo_Viper_1.0.xcodeproj",
       "identifier" : "C2CBD9C72E967B5300C4097B",
       "name" : "ToDo_Viper_1.0"
-    }
+    },
+    "threadSanitizerEnabled" : true
   },
   "testTargets" : [
     {
@@ -27,11 +28,6 @@
     },
     {
       "parallelizable" : true,
-      "skippedTests" : [
-        "ToDo_Viper_1_0UITests\/testExample()",
-        "ToDo_Viper_1_0UITests\/testLaunchPerformance()",
-        "ToDo_Viper_1_0UITestsLaunchTests\/testLaunch()"
-      ],
       "target" : {
         "containerPath" : "container:ToDo_Viper_1.0.xcodeproj",
         "identifier" : "C2CBD9DE2E967B5500C4097B",
