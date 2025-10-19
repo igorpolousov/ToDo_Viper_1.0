@@ -23,6 +23,6 @@ class TestCoreDataStack: CoreDataStack {
                 fatalError("Unresolved error \(error) \(error.userInfo)")
             }
         }
-        storeContailner = container
+        storeContainer = container
     }
 }

@@ -2,7 +2,11 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24299" systemVersion="25A354" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
     <entity name="CDTodoModel" representedClassName="CDTodoModel" syncable="YES">
         <attribute name="completed" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="id" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES">
+            <userInfo>
+                <entry key="id" value="value"/>
+            </userInfo>
+        </attribute>
         <attribute name="notes" attributeType="String"/>
         <attribute name="time" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="todo" attributeType="String"/>

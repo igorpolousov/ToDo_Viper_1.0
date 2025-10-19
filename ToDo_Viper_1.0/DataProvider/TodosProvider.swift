@@ -17,20 +17,36 @@ class TodosProvider: ObservableObject {
     @Published var todos: [Todo] = []
     @Published var searchText: String = ""
     @Published var filteredTodos: [Todo] = []
-    @Published var cdtodos: [CDTodoModel] = []
+    @Published var cdtodos = Set<CDTodoModel>()
     
     private var cancellables = Set<AnyCancellable>()
     
     init() {
         addSubscribers()
+        readTodosFromCoreData()
     }
     
     // Create new todo with default todo, notes, data values
     func createTodo() {
-        var newTodo = Todo(id: idForNewTodo(), todo: "Add new todo name",completed: false, userId: 1034)
-        newTodo.notes = "Add some notes"
-        todos.insert(newTodo, at: 0)
-        coreDataStack.saveContext()
+//        var newTodo = Todo(id: idForNewTodo(), todo: "Add new todo name",completed: false, userId: 1034)
+//        newTodo.notes = "Add some notes"
+//        todos.insert(newTodo, at: 0)
+        coreDataStack.managedContext.automaticallyMergesChangesFromParent = true
+        let backgroundContext = coreDataStack.storeContainer.newBackgroundContext()
+
+        backgroundContext.perform {
+            let newTodo = CDTodoModel(context: self.coreDataStack.managedContext)
+            newTodo.id = Double(self.idForNewTodo())
+            newTodo.todo = "Add new todo name"
+            newTodo.completed =  false
+            newTodo.userId = 1034
+            newTodo.notes = "Add some notes"
+            newTodo.time = Date.now
+            self.coreDataStack.saveContext()
+          
+        }
+       
+        self.readTodosFromCoreData()
     }
     
     // Find id for new todo
@@ -100,13 +116,16 @@ class TodosProvider: ObservableObject {
         var asyncFetchRequest: NSAsynchronousFetchRequest<CDTodoModel>?
         asyncFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest){ [weak self] (result: NSAsynchronousFetchResult) in
             guard let result = result.finalResult else { return }
-            // save data from core data
-            self?.cdtodos = result
+            self?.cdtodos = Set(result)
+            for item in self!.cdtodos {
+                print(item.id)
+            }
         }
         
         do {
             guard let asyncFetchRequest = asyncFetchRequest else { return }
             try self .coreDataStack.managedContext.execute(asyncFetchRequest)
+            
         } catch let error as NSError {
             print("Unable to laod data from Core Data store \(error.localizedDescription)")
         }

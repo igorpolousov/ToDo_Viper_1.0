@@ -16,7 +16,7 @@ class CoreDataStack: ObservableObject {
         self.modelName = modelName
     }
     
-    public lazy var storeContailner: NSPersistentContainer = {
+    public lazy var storeContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: modelName)
         container.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
@@ -26,8 +26,9 @@ class CoreDataStack: ObservableObject {
         return container
     }()
     
+    
     lazy var managedContext: NSManagedObjectContext = {
-        return self.storeContailner.viewContext
+        return self.storeContainer.viewContext
     }()
     
     
