@@ -22,6 +22,7 @@ class TodosProvider: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     init() {
+        coreDataStack.managedContext.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump
         addSubscribers()
         readTodosFromCoreData()
     }
@@ -31,7 +32,8 @@ class TodosProvider: ObservableObject {
 //        var newTodo = Todo(id: idForNewTodo(), todo: "Add new todo name",completed: false, userId: 1034)
 //        newTodo.notes = "Add some notes"
 //        todos.insert(newTodo, at: 0)
-        coreDataStack.managedContext.automaticallyMergesChangesFromParent = true
+        //coreDataStack.managedContext.automaticallyMergesChangesFromParent = true
+        
         let backgroundContext = coreDataStack.storeContainer.newBackgroundContext()
 
         backgroundContext.perform {
@@ -43,18 +45,16 @@ class TodosProvider: ObservableObject {
             newTodo.notes = "Add some notes"
             newTodo.time = Date.now
             self.coreDataStack.saveContext()
-          
+            self.readTodosFromCoreData()
         }
-       
-        self.readTodosFromCoreData()
     }
     
     // Find id for new todo
-    private func idForNewTodo() -> Int {
-        guard !todos.isEmpty else { return 1 }
-        var id = 0
-        for todo in todos {
-            if todo.id > id {
+    private func idForNewTodo() -> Double {
+        guard !cdtodos.isEmpty else { return 1 }
+        var id = 0.0
+        for todo in cdtodos {
+            if todo.id >= id {
                 id = todo.id + 1
             }
         }
@@ -112,14 +112,22 @@ class TodosProvider: ObservableObject {
     }
     
     func readTodosFromCoreData() {
+      
+        
         let fetchRequest: NSFetchRequest<CDTodoModel> = CDTodoModel.fetchRequest()
         var asyncFetchRequest: NSAsynchronousFetchRequest<CDTodoModel>?
         asyncFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest){ [weak self] (result: NSAsynchronousFetchResult) in
             guard let result = result.finalResult else { return }
             self?.cdtodos = Set(result)
-            for item in self!.cdtodos {
-                print(item.id)
+//            for todo in self!.cdtodos {
+//                self?.coreDataStack.managedContext.delete(todo)
+//                self?.coreDataStack.saveContext()
+//            }
+
+            for todo in self!.cdtodos {
+                print("\(todo.id) ")
             }
+            print(self!.cdtodos.count)
         }
         
         do {
