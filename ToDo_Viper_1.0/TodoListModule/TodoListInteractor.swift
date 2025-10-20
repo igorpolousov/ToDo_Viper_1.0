@@ -19,4 +19,8 @@ class TodoListInteractor {
         provider.createTodo()
     }
     
+    func deleteTodo(with id:Todo.ID) {
+        provider.deleteTodo(with: id)
+    }
+    
 }

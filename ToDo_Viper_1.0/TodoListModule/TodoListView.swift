@@ -34,9 +34,7 @@ struct TodoListView: View {
                         }
                         
                         Button("Удалить", image: ImageResource(name: "trash", bundle: .main), role: .destructive) {
-                            //                            if let index = tasksData.tasks.firstIndex(of: task!) {
-                            //                                tasksData.deleteTask(at: index)
-                            //                            }
+                            presenter.deleteTodo(with: todo.id)
                         }
                     }
                     .navigationDestination(isPresented: $isShowDetailView) {

@@ -113,8 +113,6 @@ class TodosProvider: ObservableObject {
     }
     
     func readTodosFromCoreData() {
-      
-        
         let fetchRequest: NSFetchRequest<CDTodoModel> = CDTodoModel.fetchRequest()
         var asyncFetchRequest: NSAsynchronousFetchRequest<CDTodoModel>?
         asyncFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest){ [weak self] (result: NSAsynchronousFetchResult) in
@@ -137,6 +135,16 @@ class TodosProvider: ObservableObject {
             
         } catch let error as NSError {
             print("Unable to laod data from Core Data store \(error.localizedDescription)")
+        }
+        
+    }
+    
+    func deleteTodo(with id: Todo.ID) {
+        let todoIndexToDelete = todos.firstIndex { todo in
+            todo.id == id
+        }
+        if let todoIndexToDelete {
+            todos.remove(at: todoIndexToDelete)
         }
         
     }
