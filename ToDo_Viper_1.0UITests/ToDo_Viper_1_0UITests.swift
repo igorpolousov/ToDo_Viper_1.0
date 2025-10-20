@@ -43,9 +43,22 @@ final class ToDo_Viper_1_0UITests: XCTestCase {
         element.swipeUp()
         element.swipeDown()
         XCTAssertEqual(element.cells.count, 1)
-       
+        
+        // Test elements sizes
         app/*@START_MENU_TOKEN@*/.buttons["circleGray"]/*[[".otherElements.buttons[\"circleGray\"]",".buttons[\"circleGray\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
         app/*@START_MENU_TOKEN@*/.images["tick"]/*[[".buttons.images[\"tick\"]",".images[\"tick\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
+        
+        XCTAssertEqual(app/*@START_MENU_TOKEN@*/.buttons["circleGray"]/*[[".otherElements.buttons[\"circleGray\"]",".buttons[\"circleGray\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.frame.width, 24)
+        
+        // Test font sizes
+        
+        XCTAssertEqual(app/*@START_MENU_TOKEN@*/.staticTexts["Add new todo name"]/*[[".otherElements.staticTexts[\"Add new todo name\"]",".staticTexts[\"Add new todo name\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.label, "Add new todo name")
+        XCTAssertEqual( app/*@START_MENU_TOKEN@*/.staticTexts["20.10.2025"]/*[[".otherElements.staticTexts[\"20.10.2025\"]",".staticTexts[\"20.10.2025\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.label, Date.now.formatted(date: .numeric, time: .omitted))
+       
+      
+       
+        
+        
         
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.

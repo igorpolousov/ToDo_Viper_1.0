@@ -35,21 +35,6 @@ struct TodoListRowView: View {
                     .font(Font.mainFont)
                     .strikethrough(todoCompleted)
                     .foregroundStyle(Color.white)
-//                    .contextMenu {
-//                        Button("Редактировать", image: ImageResource(name: "edit", bundle: .main)) {
-//                            isShowDetailView.toggle()
-//                        }
-//                        
-//                        ShareLink(item: todo.todo) {
-//                            Label("Поделиться", image: "export")
-//                        }
-//                        
-//                        Button("Удалить", image: ImageResource(name: "trash", bundle: .main), role: .destructive) {
-//                            //                            if let index = tasksData.tasks.firstIndex(of: task!) {
-//                            //                                tasksData.deleteTask(at: index)
-//                            //                            }
-//                        }
-//                    }
                 Spacer()
             }
             
