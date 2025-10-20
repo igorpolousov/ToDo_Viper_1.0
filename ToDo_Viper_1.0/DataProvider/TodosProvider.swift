@@ -29,9 +29,10 @@ class TodosProvider: ObservableObject {
     
     // Create new todo with default todo, notes, data values
     func createTodo() {
-//        var newTodo = Todo(id: idForNewTodo(), todo: "Add new todo name",completed: false, userId: 1034)
-//        newTodo.notes = "Add some notes"
-//        todos.insert(newTodo, at: 0)
+        var newTodo = Todo(id: Int(idForNewTodo()), todo: "Add new todo name",completed: false, userId: 1034)
+        newTodo.notes = "Add some notes"
+        todos.insert(newTodo, at: 0)
+        
         //coreDataStack.managedContext.automaticallyMergesChangesFromParent = true
         
         let backgroundContext = coreDataStack.storeContainer.newBackgroundContext()

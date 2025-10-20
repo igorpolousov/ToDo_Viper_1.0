@@ -9,48 +9,71 @@ import SwiftUI
 
 struct TodoListView: View {
     @ObservedObject var presenter: TodoListPresenter
+    @State private var isShowDetailView: Bool = false
     
     var body: some View {
-        List {
-            ForEach(presenter.isSearching ? presenter.filteredTodos : presenter.todos, id:\.id) { todo in
-                ZStack {
-                    presenter.linkBuilder(for: todo) {}
-                        .buttonStyle(.plain)
-                        .opacity(0.0)
-                        .frame(height: 0)
+        NavigationStack {
+            List {
+                ForEach(presenter.isSearching ? presenter.filteredTodos : presenter.todos, id:\.id) { todo in
+                    ZStack {
+                        presenter.linkBuilder(for: todo) {}
+                            .buttonStyle(.plain)
+                            .opacity(0.0)
+                            .frame(height: 0)
+                        
+                        TodoListRowView(todo: todo)
+                        
+                    }
+                    .contextMenu {
+                        Button("Редактировать", image: ImageResource(name: "edit", bundle: .main)) {
+                            isShowDetailView.toggle()
+                        }
+                        
+                        ShareLink(item: todo.todo) {
+                            Label("Поделиться", image: "export")
+                        }
+                        
+                        Button("Удалить", image: ImageResource(name: "trash", bundle: .main), role: .destructive) {
+                            //                            if let index = tasksData.tasks.firstIndex(of: task!) {
+                            //                                tasksData.deleteTask(at: index)
+                            //                            }
+                        }
+                    }
+                    .navigationDestination(isPresented: $isShowDetailView) {
+                        presenter.showDetailView(for: todo)
+                    }
+                    .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
                     
-                    TodoListRowView(todo: todo)
                 }
-                .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                
             }
-        }
-        .accessibilityIdentifier("TodosListTests")
-        .buttonStyle(BorderlessButtonStyle())
-        .navigationTitle("Todos")
-        .listStyle(.insetGrouped)
-        .scrollContentBackground(.hidden)
-        .background(Color.black)
-        .toolbarBackground(.visible)
-        .toolbar {
-            ToolbarItem(placement: .bottomBar) {
-                HStack {
-                    Spacer(minLength: 150)
-                    
-                    // Tasks counter bottom toolbar
-                    presenter.makeBottomToolBarCounter()
-                    
-                    Spacer()
-                    
-                    // Creating new task button
-                    presenter.makeAddNewButton()
+            .accessibilityIdentifier("TodosListTests")
+            .buttonStyle(BorderlessButtonStyle())
+            .navigationTitle("Todos")
+            .listStyle(.insetGrouped)
+            .scrollContentBackground(.hidden)
+            .background(Color.black)
+            .toolbarBackground(.visible)
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    HStack {
+                        Spacer(minLength: 150)
+                        
+                        // Tasks counter bottom toolbar
+                        presenter.makeBottomToolBarCounter()
+                        
+                        Spacer()
+                        
+                        // Creating new task button
+                        presenter.makeAddNewButton()
+                    }
                 }
             }
+            // Style setup for bottom toolbar
+            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .bottomBar)
+            .searchable(text: $presenter.searchText, placement: .automatic, prompt: Text("Search in todos"))
         }
-        // Style setup for bottom toolbar
-        .toolbarColorScheme(.dark, for: .navigationBar)
-        .toolbarColorScheme(.dark, for: .bottomBar)
-        .searchable(text: $presenter.searchText, placement: .automatic, prompt: Text("Search in todos"))
-
     }
 }
 

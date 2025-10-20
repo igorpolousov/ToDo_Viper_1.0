@@ -12,6 +12,7 @@ struct TodoListRowView: View {
     @State private var isShowDetailView: Bool = false
     @State private var todoCompleted: Bool = false
     
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -23,30 +24,32 @@ struct TodoListRowView: View {
                         }
                     } else {
                         Image("circleGray")
+                            
                             .clipped()
                     }
                 })
+                .frame(width: 24, height: 24)
                 
                 Text(todo.todo)
                     .opacity(0.5)
                     .font(Font.mainFont)
                     .strikethrough(todoCompleted)
                     .foregroundStyle(Color.white)
-                    .contextMenu {
-                        Button("Редактировать", image: ImageResource(name: "edit", bundle: .main)) {
-                            isShowDetailView.toggle()
-                        }
-                        
-                        ShareLink(item: todo.todo) {
-                            Label("Поделиться", image: "export")
-                        }
-                        
-                        Button("Удалить", image: ImageResource(name: "trash", bundle: .main), role: .destructive) {
-                            //                            if let index = tasksData.tasks.firstIndex(of: task!) {
-                            //                                tasksData.deleteTask(at: index)
-                            //                            }
-                        }
-                    }
+//                    .contextMenu {
+//                        Button("Редактировать", image: ImageResource(name: "edit", bundle: .main)) {
+//                            isShowDetailView.toggle()
+//                        }
+//                        
+//                        ShareLink(item: todo.todo) {
+//                            Label("Поделиться", image: "export")
+//                        }
+//                        
+//                        Button("Удалить", image: ImageResource(name: "trash", bundle: .main), role: .destructive) {
+//                            //                            if let index = tasksData.tasks.firstIndex(of: task!) {
+//                            //                                tasksData.deleteTask(at: index)
+//                            //                            }
+//                        }
+//                    }
                 Spacer()
             }
             

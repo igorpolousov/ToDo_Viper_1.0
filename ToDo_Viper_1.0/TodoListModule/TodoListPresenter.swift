@@ -56,6 +56,10 @@ class TodoListPresenter: ObservableObject {
         interactor.addNewTodo()
     }
     
+    func showDetailView(for todo: Todo) -> some View {
+        router.makeDetailView(for: todo, provider: interactor.provider)
+    }
+    
     
     
     // Searchinig in tasks
